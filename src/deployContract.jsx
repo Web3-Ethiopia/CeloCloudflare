@@ -8,7 +8,7 @@ export const deployContract = async ({ signerInitial }) => {
     signerInitial
   );
 
-  const factoryContract = await NewContract.deploy().catch((e) =>
-    console.log(e)
+  const factoryContract = await NewContract.deploy(signerInitial.address).catch(
+    (e) => console.log(e)
   );
 };
